@@ -1204,7 +1204,7 @@ end
 
 AddEle("Corner", function(parent, CornerRadius)
 	local New = SetProps(Create("UICorner", parent, {
-		CornerRadius = CornerRadius or UDim.new(0, 7)
+		CornerRadius = CornerRadius or UDim.new(0, 2)
 	}), props)
 	return New
 end)
@@ -1291,7 +1291,7 @@ AddEle("Button", function(parent, props, ...)
 
 	-- Criação da borda com gradiente vermelho e preto
 	local border = Instance.new("UIStroke")
-	border.Thickness = 2
+	border.Thickness = 0.02
 	border.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 	border.Parent = New
 
@@ -1300,7 +1300,7 @@ AddEle("Button", function(parent, props, ...)
 		ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)), -- vermelho
 		ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 0, 0))    -- preto
 	})
-	gradient.Rotation = 0
+	gradient.Rotation = 9
 	gradient.Parent = border
 
 	New.MouseEnter:Connect(function()
@@ -2061,7 +2061,7 @@ function redzlib:MakeWindow(Configs)
 				Position = UDim2.new(1, -10, 0.5),
 				AnchorPoint = Vector2.new(1, 0.5),
 				BackgroundTransparency = 1,
-				Image = "rbxassetid://10709791437"
+				Image = "rbxassetid://10734898592"
 			})
 			
 			FButton.Activated:Connect(function()
